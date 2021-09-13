@@ -1,3 +1,4 @@
+﻿
 #include <iostream>
 #include <vector>
 #include "Header1.h"
@@ -6,10 +7,9 @@ using namespace std;
 
 int main()
 {
-    vector<pair<int, int>> mas;
 
-    int x1, y1, w, h;
-    Rectangle first;
+   int x1, y1, w,x2,y2, h;
+    /*Rectangle first;
 
         cin >> x1 >> y1;
         cin >> w >> h;
@@ -23,7 +23,28 @@ int main()
         
 
         first.min_param();
-        first.display();
+        first.display();*/
 
+    Rectangle one, two, rez;
+
+    cin >> x1 >> y1 >> x2 >> y2;
+    one.set_coordinate(x1, y1, x2, y2);
+    one.display();
+    
+
+    cin >> x1 >> y1 >> x2 >> y2;
+    two.set_coordinate(x1, y1, x2, y2);
+    two.display();
+
+
+    cout << "\nJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ\n";
+
+    rez = one - two;
+    rez.display();
+
+    cout << "\nJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJJ\n";
+
+    one += two;
+    one.display();
     return 0;
 }
